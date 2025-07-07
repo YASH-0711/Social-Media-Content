@@ -9,6 +9,7 @@ export const CalendarProvider = ({ children }) => {
     const [currentDate, setCurrentDate] = useState(new Date());
     const [viewMode, setViewMode] = useState('month');
     const [showDialog, setShowDialog] = useState(false);
+    const [detailDialog, setDetailDialog] = useState(false);
 
     const [events, setEvents] = useState(scheduledPostsData);
 
@@ -19,7 +20,9 @@ export const CalendarProvider = ({ children }) => {
         setViewMode,
         events,
         showDialog,
-        setShowDialog
+        setShowDialog,
+        detailDialog,
+        setDetailDialog
     };
 
     return (
